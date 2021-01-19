@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+
+
+<body>
+    <style>
+        .myCalc {
+            color: lavenderblush;
+            height: 276px;
+            width: 281px;
+            display: flex;
+            border: 1px solid black;
+            text-align: end;
+            background: darkseagreen;
+        }
+
+        .button {
+            color: black;
+            background: lemonchiffon;
+            width: 52px;
+            height: 43px;
+            margin: 2px;
+            font-size: xx-large;
+        }
+
+        .button-block {
+            width: 270px;
+            height: 40px;
+            margin-left: -19px;
+            margin-top: 6px;
+        }
+
+        .input-block {
+            width: 213px;
+            height: 195px;
+            margin-left: 8px;
+            margin-top: 11px;
+            font-size: 24px;
+        }
+
+        .input {
+            width: 237px;
+            height: 29px;
+            margin-left: 9px;
+        }
+    </style>
+    <div class="myCalc">
+
+        <div class="input-block">
+            <div><label>значение1</label> <input class="input" id="inputFild" onchange="console.log(this.value)"
+                    type="text"></div>
+            <div><label>значение2</label> <input class="input" id="inputFild2" onchange="console.log(this.value)"
+                    type="text"></div>
+            <div><label>результат</label> <input class="input" id="inputResult" onchange="console.log(this.value)"
+                    type="text"></div>
+            <div>
+                <hr />
+            </div>
+
+            <div class="button-block">
+                <input class="button" id="buttonPlus" value="+" type="button">
+                <input class="button" id="buttonMinus" value="-" type="button">
+                <input class="button" id="buttonMultiply" value="*" type="button">
+                <input class="button" id="buttonDivision" value="/" type="button">
+            </div>
+
+        </div>
+</body>
+<script>
+    let firstInput = document.getElementById("inputFild")
+    let secondInput = document.getElementById("inputFild2")
+    let resultInput = document.getElementById("inputResult")
+
+
+    let buttonPlus = document.getElementById("buttonPlus")
+    buttonPlus.onclick = () => {
+        let firstNumber = firstInput.value
+        let secondNumber = secondInput.value
+        let result = (Number(firstNumber)) + (Number(secondNumber))
+        return resultInput.value = result + ""
+    };
+
+    let buttonMinus = document.getElementById("buttonMinus")
+    buttonMinus.onclick = () => {
+        let firstNumber = firstInput.value
+        let secondNumber = secondInput.value
+        let result = (Number(firstNumber)) - (Number(secondNumber))
+        return resultInput.value = result + ""
+    }
+
+    let buttonMultiply = document.getElementById("buttonMultiply")
+    buttonMultiply.onclick = () => {
+        let firstNumber = firstInput.value
+        let secondNumber = secondInput.value
+        let result = (Number(firstNumber)) * (Number(secondNumber))
+        return resultInput.value = result + ""
+    }
+
+    let buttonDivision = document.getElementById("buttonDivision")
+    buttonDivision.onclick = () => {
+        let firstNumber = firstInput.value
+        let secondNumber = secondInput.value
+        let result = (Number(firstNumber)) / (Number(secondNumber))
+        return resultInput.value = result + ""
+    }
+
+
+
+
+
+</script>
+
+
+</html>
