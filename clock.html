@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+
+
+<body>
+    <style>
+        .myClock {
+            text-align: center;
+            width: 200px;
+            height: 238px;
+            background-color: #F5DF4D;
+            border-radius: 10px;
+            font-family: fantasy
+        }
+
+        .inputBlock {
+            width: ;
+            height: ;
+            color: #939597;
+        }
+
+        .label {
+            width: 100px;
+            height: 100px;
+            color: #939597;
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        .input {
+            widows: 40px;
+
+            height: 100%;
+        }
+    </style>
+    <div class="myClock">
+        <div class="inputBlock">
+            <div class="input"><label class="label">Год</label>
+                <div id="inputYear"></div>
+            </div>
+            <div class="input"><label class="label">Месяц</label>
+                <div id="inputMonth"></div>
+            </div>
+            <div class="input"><label class="label">День</label>
+                <div id="inputDay"></div>
+            </div>
+            <div class="input"><label class="label">Часы</label>
+                <div id="inputHours"></div>
+            </div>
+            <div class="input"><label class="label">Минуты</label>
+                <div id="inputMinutes"></div>
+            </div>
+            <div class="input"><label class="label">Секунды</label>
+                <div id="inputSeconds"></div>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+<script>
+    function dateFunc() {
+        let date = new Date()
+
+        let year = date.getFullYear()
+        let month = date.getMonth()
+        let day = date.getDate()
+        let hours = date.getHours()
+        let minutes = date.getMinutes()
+        let second = date.getSeconds()
+
+        let inputYear = document.getElementById("inputYear")
+        const { innerHTML: newInnerHtml } = inputYear
+
+
+
+        inputYear.innerHTML = year
+        let inputMonth = document.getElementById("inputMonth")
+        inputMonth.innerHTML = month + 1
+        let inputDay = document.getElementById("inputDay")
+        inputDay.innerHTML = day
+        let inputHours = document.getElementById("inputHours")
+        inputHours.innerHTML = hours
+        let inputMinutes = document.getElementById("inputMinutes")
+        inputMinutes.innerHTML = minutes
+        let inputSeconds = document.getElementById("inputSeconds")
+        inputSeconds.innerHTML = second
+    }
+    setInterval(dateFunc, 1000)
+
+
+
+
+</script>
+
+
+</html>
